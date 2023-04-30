@@ -62,6 +62,7 @@ List* get_adj_nodes(Node* n){
             {
                 nAux->sudo[i][j] = posiblesDigitos;
                 posiblesDigitos++;
+                printf("%d", n->sudo[0][2]);
                 break;
             }
         }
