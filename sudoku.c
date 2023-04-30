@@ -44,11 +44,32 @@ void print_node(Node* n){
 }
 
 int is_valid(Node* n){
-    int esValido = 1;
-    int Validador[9] = {};
+    int validador[10] = {};
+    
     for (int i = 0; i < 9; i++)
-        printf("%d", Validador[i]);
-    return esValido;
+    {
+        for (int j = 0; j < 9; j++)
+        {
+            if (n->sudo[i][j] != 0)
+            {
+                int digito = n->sudo[i][j];
+                validador[digito] = 1;
+                int ocurrencias = 0;
+                for (int indice = 0; indice < 9; indice++)
+                {
+                    if (validador[digito] == n->sudo[i][indice] && indice != j)
+                        return 0;
+                    if (validador[digito] == n->sudo[indice][j] && indice != i)
+                        return 0;
+                }
+                
+                for (int k = 0; k < 10; k++)
+                    validador[k] = 0;
+            }
+        }
+    }
+    
+    return 1;
 }
 
 

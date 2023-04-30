@@ -136,3 +136,14 @@ Sun 30 Apr 2023 08:19:44 PM UTC:
  tests:  2|4
 total_score: 15/70
 4e02e67
+Sun 30 Apr 2023 08:42:17 PM UTC: 
+ sudoku.c | 29 +++++++++++++++++++++++++----
+ 1 file changed, 25 insertions(+), 4 deletions(-)
+In file included from test.c:5:
+sudoku.c: In function ‘is_valid’:
+sudoku.c:57:21: error: unused variable ‘ocurrencias’ [-Werror=unused-variable]
+   57 |                 int ocurrencias = 0;
+      |                     ^~~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+7a8e455
