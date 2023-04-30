@@ -54,6 +54,7 @@ List* get_adj_nodes(Node* n){
     int posiblesDigitos = 1;
     Node* nAux;
     int indicador;
+    
     for (int k = 0; k < 9; k++)
     {
         indicador = 0;
@@ -73,7 +74,8 @@ List* get_adj_nodes(Node* n){
             if (indicador == 1)
                 break;
         }
-        pushBack(list, nAux);
+        if (!indicador)
+            pushBack(list, nAux);
     }
     return list;
 }
