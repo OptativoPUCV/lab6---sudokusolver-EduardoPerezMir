@@ -52,20 +52,42 @@ int is_valid(Node* n){
         {
             if (n->sudo[i][j] != 0)
             {
-                int digito = n->sudo[i][j];
-                validador[digito] = 1;
-                for (int indice = 0; indice < 9; indice++)
-                {
-                    if (validador[digito] == n->sudo[i][indice] && indice != j)
-                        return 0;
-                    if (validador[digito] == n->sudo[indice][j] && indice != i)
-                        return 0;
-                }
-                
-                for (int k = 0; k < 10; k++)
-                    validador[k] = 0;
+                if (validador[n->sudo[i][j]] == 1)
+                    return 0;
+                else
+                    validador[n->sudo[i][j]] = 1;
             }
         }
+        for (int w = 0; w < 10; w++)
+            validador[w] = 0;
+        
+        for (int j = 0; j < 9; j++)
+        {
+            if (n->sudo[j][i] != 0)
+            {
+                if (validador[n->sudo[j][i]] == 1)
+                    return 0;
+                else
+                    validador[n->sudo[j][i]] = 1;
+            }
+        }
+        for (int w = 0; w < 10; w++)
+            validador[w] = 0;
+        for (int indice = 0; indice < 9; indice++)
+        {
+            int j = 3 * (i / 3) + (indice / 3);
+            int k = 3 * (i % 3) + (indice % 3);
+            
+            if (n->sudo[j][k] != 0)
+            {
+                if (validador[n->sudo[j][k]] == 1)
+                    return 0;
+                else
+                    validador[n->sudo[j][k]] = 1;
+            }
+        }
+        for (int w = 0; w < 10; w++)
+            validador[w] = 0;
     }
     
     return 1;
