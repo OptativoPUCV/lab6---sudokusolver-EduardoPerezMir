@@ -54,7 +54,6 @@ int is_valid(Node* n){
             {
                 int digito = n->sudo[i][j];
                 validador[digito] = 1;
-                int ocurrencias = 0;
                 for (int indice = 0; indice < 9; indice++)
                 {
                     if (validador[digito] == n->sudo[i][indice] && indice != j)
