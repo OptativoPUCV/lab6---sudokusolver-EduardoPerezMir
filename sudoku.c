@@ -44,8 +44,11 @@ void print_node(Node* n){
 }
 
 int is_valid(Node* n){
-
-    return 1;
+    int esValido = 1;
+    int Validador[9] = {};
+    for (int i = 0; i < 9; i++)
+        printf("%d", Validador[i]);
+    return esValido;
 }
 
 
