@@ -52,9 +52,9 @@ int is_valid(Node* n){
 List* get_adj_nodes(Node* n){
     List* list = createList();
     int posiblesDigitos = 1;
+    Node* nAux;
     for (int i = 0; i < 9; i++)
     {
-        Node* nAux = NULL;
         nAux = copy(n);
         for (int j = 0; j < 9; j++)
         {
