@@ -74,7 +74,7 @@ List* get_adj_nodes(Node* n){
             if (indicador == 1)
                 break;
         }
-        if (!indicador)
+        if (indicador)
             pushBack(list, nAux);
     }
     return list;
