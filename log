@@ -24,3 +24,9 @@ sudoku.c:54:9: error: variable ‘indicador’ set but not used [-Werror=unused-
 cc1: all warnings being treated as errors
 Compilation failed
 cba46b6
+Sun 30 Apr 2023 07:59:02 PM UTC: 
+ sudoku.c | 3 ---
+ 1 file changed, 3 deletions(-)
+ tests:  0|5
+total_score: 0/70
+1b3d4f0
