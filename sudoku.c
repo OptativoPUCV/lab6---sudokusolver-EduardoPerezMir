@@ -53,18 +53,24 @@ List* get_adj_nodes(Node* n){
     List* list = createList();
     int posiblesDigitos = 1;
     Node* nAux;
-    for (int i = 0; i < 9; i++)
+    int indicador;
+    for (int k = 0; k < 9; k++)
     {
+        indicador = 0;
         nAux = copy(n);
-        for (int j = 0; j < 9; j++)
+        for (int i = 0; i < 9; i++)
         {
-            if (nAux->sudo[i][j] == 0)
+            for (int j = 0; j < 9; j++)
             {
-                nAux->sudo[i][j] = posiblesDigitos;
-                posiblesDigitos++;
-                printf("%d", nAux->sudo[0][2]);
-                break;
+                if (nAux->sudo[i][j] == 0)
+                {
+                    nAux->sudo[i][j] = posiblesDigitos;
+                    posiblesDigitos++;
+                    break;
+                }
             }
+            if (indicador == 1)
+                break;
         }
         pushBack(list, nAux);
     }
