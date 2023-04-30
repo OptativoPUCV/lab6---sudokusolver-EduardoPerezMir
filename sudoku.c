@@ -14,7 +14,7 @@ Node* createNode(){
 
 Node* copy(Node* n){
     Node* new=(Node*) malloc(sizeof(Node));
-    *new = *n;
+    new = n;
     return new;
 }
 
