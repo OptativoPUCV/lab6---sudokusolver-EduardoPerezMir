@@ -13,3 +13,14 @@ sudoku.c:58:1: error: control reaches end of non-void function [-Werror=return-t
 cc1: all warnings being treated as errors
 Compilation failed
 60ccffe
+Sun 30 Apr 2023 07:58:51 PM UTC: 
+ sudoku.c | 17 +++++++++++++++--
+ 1 file changed, 15 insertions(+), 2 deletions(-)
+In file included from test.c:5:
+sudoku.c: In function ‘get_adj_nodes’:
+sudoku.c:54:9: error: variable ‘indicador’ set but not used [-Werror=unused-but-set-variable]
+   54 |     int indicador;
+      |         ^~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+cba46b6
