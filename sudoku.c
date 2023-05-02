@@ -159,7 +159,7 @@ Node* DFS(Node* initial, int* cont){
             while (is_empty(listaAux))
             {
                 push(pila, last(listaAux));
-                popBack(listaAux);
+                popFront(listaAux);
             }
         }
         (*cont)++;
