@@ -163,6 +163,7 @@ Node* DFS(Node* initial, int* cont){
             }
         }
         (*cont)++;
+        printf("%d", *cont);
     }
     
     return NULL;
