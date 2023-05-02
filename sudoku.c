@@ -140,7 +140,6 @@ int is_final(Node* n){
 Node* DFS(Node* initial, int* cont){
     Stack* pila = createStack();
     Node* nAux = createNode();
-    Node* nAux2 = createNode();
     List* listaAux = createList();
     *cont = 0;
     
