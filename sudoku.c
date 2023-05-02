@@ -147,7 +147,7 @@ Node* DFS(Node* initial, int* cont){
     while (is_empty(pila))
     {
         nAux = first(pila);
-        popFront(pila);
+        pop(pila);
         
         if (is_final(nAux))
         {
