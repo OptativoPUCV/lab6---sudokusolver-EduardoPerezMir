@@ -144,7 +144,7 @@ Node* DFS(Node* initial, int* cont){
     *cont = 0;
     
     push(pila, initial);
-    while (is_empty(pila))
+    while (!is_empty(pila))
     {
         nAux = first(pila);
         popFront(pila);
@@ -156,10 +156,10 @@ Node* DFS(Node* initial, int* cont){
         else
         {
             listaAux = get_adj_nodes(nAux);
-            while (is_empty(listaAux))
+            while (!is_empty(listaAux))
             {
                 push(pila, first(listaAux));
-                popFront(listaAux);
+                popBack(listaAux);
             }
         }
         (*cont)++;
